@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Lappu } from '../lappu';
-
 @Component({
   selector: 'app-lappu',
   templateUrl: './lappu.component.html',
@@ -17,6 +16,6 @@ export class LappuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }
