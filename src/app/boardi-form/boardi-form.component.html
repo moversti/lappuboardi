@@ -1,0 +1,8 @@
+<button (click)="openForm()" [hidden]="isOpen">
+    +
+</button>
+<form *ngIf="isOpen" (ngSubmit)="onSubmit()" #boardiForm="ngForm">
+    <input type="text" id="teksti" required [(ngModel)]="model.teksti"
+        name="teksti" />
+    <input type="submit" [disabled]="!boardiForm.form.valid" />
+</form>
