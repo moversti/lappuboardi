@@ -18,7 +18,7 @@ export class BoardiComponent implements OnInit {
   constructor(private lappuService: LappuService) { }
 
   ngOnInit() {
-    console.log(this.lappuService)
+    // console.log(this.lappuService)
     this.getLaput()
   }
 
