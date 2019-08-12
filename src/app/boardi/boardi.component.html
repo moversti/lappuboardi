@@ -1,3 +1,4 @@
+<button (click)="clearLaput()">Tyhjennä</button>
 <h1>Boardi</h1>
 <ng-container *ngFor="let lappu of laput">
     <app-lappu [lappu]="lappu" (dragged)="saveLS()">

@@ -28,4 +28,9 @@ export class BoardiComponent implements OnInit {
     this.lappuService.saveLS()
   }
 
+  clearLaput() {
+    this.laput = []
+    this.lappuService.clear()
+  }
+
 }

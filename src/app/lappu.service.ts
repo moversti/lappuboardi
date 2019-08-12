@@ -23,10 +23,15 @@ export class LappuService {
 
   addLappu(lappu: Lappu) {
     this.laput.push(lappu)
-    this.LSService.saveToLS(this.laput)
+    this.saveLS()
   }
 
   saveLS() {
     this.LSService.saveToLS(this.laput)
+  }
+
+  clear() {
+    this.laput = []
+    this.saveLS()
   }
 }
