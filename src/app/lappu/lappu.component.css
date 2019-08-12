@@ -6,8 +6,9 @@ div {
     width: 235px;
     margin: 25px;
     min-height: 200px;
-    max-height: 200px;
-    padding-top: 35px;
+    /* max-height: 200px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
     /* border: 1px solid #E8E8E8; */
     /* border-top: 60px solid #fdfd86; */
