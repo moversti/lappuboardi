@@ -19,7 +19,13 @@ export class BoardiComponent implements OnInit {
 
   ngOnInit() {
     // console.log(this.lappuService)
+    this.lappuService.getSavedFromLS()
     this.getLaput()
+  }
+
+  saveLS() {
+    console.log('got event')
+    this.lappuService.saveLS()
   }
 
 }

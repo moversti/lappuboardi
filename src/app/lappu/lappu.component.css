@@ -9,7 +9,7 @@ div {
     max-height: 200px;
     padding-top: 35px;
     position: relative;
-    border: 1px solid #E8E8E8;
+    /* border: 1px solid #E8E8E8; */
     /* border-top: 60px solid #fdfd86; */
     font-family: 'Indie Flower', cursive;
     font-size: 22px;
@@ -31,21 +31,7 @@ div {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #aaaaaa; 
 }
 
-div:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    right: -0px;
-    bottom: 20px;
-    width: 200px;
-    height: 25px;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 15px 5px rgba(0, 0, 0, 0.40);
-    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-    -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-    -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-    -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-    transform: matrix(-1, -0.1, 0, 1, 0, 0);
-}

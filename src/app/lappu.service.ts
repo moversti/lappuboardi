@@ -1,16 +1,32 @@
 import { Injectable } from '@angular/core';
-import { LAPUT } from './mock-laput'
 import { Observable, of } from 'rxjs';
 import { Lappu } from './lappu';
+import { LocalstorageService } from './localstorage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LappuService {
 
+  constructor(private LSService: LocalstorageService) { }
+
+  laput: Lappu[]
+
   getLaput(): Observable<Lappu[]> {
-    return of(LAPUT)
+    // return of(LAPUT)
+    return of(this.laput)
   }
 
-  constructor() { }
+  getSavedFromLS(): void {
+    this.laput = this.LSService.getFromLS()
+  }
+
+  addLappu(lappu: Lappu) {
+    this.laput.push(lappu)
+    this.LSService.saveToLS(this.laput)
+  }
+
+  saveLS() {
+    this.LSService.saveToLS(this.laput)
+  }
 }

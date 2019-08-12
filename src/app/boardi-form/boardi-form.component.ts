@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Lappu } from '../lappu';
+import { LappuService } from '../lappu.service';
 
 @Component({
   selector: 'app-boardi-form',
@@ -13,6 +14,8 @@ export class BoardiFormComponent implements OnInit {
 
   onSubmit() {
     // TODO: sendaa lappu servicelle yms.
+    // console.log(this.model)
+    this.lappuService.addLappu(this.model)
     this.model = new Lappu()
     this.isOpen = false
   }
@@ -21,7 +24,7 @@ export class BoardiFormComponent implements OnInit {
     this.isOpen = true
   }
 
-  constructor() { }
+  constructor(private lappuService: LappuService) { }
 
   ngOnInit() {
   }
